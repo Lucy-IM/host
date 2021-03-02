@@ -1,0 +1,24 @@
+在命令行 ping github.com
+打开我们的命令行，输入 ping github.com，查询 ping 的结果
+
+如果像这样的输出，那么就可以接着往下看，这个方法也许会对你有用。
+
+ping github.com
+PING github.com (52.74.223.119): 56 data bytes
+Request timeout
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+Request timeout for icmp_seq 3
+Request timeout for icmp_seq 4
+Request timeout for icmp_seq 5
+寻找速度最快的 github 服务器
+当我们在本地的环境，访问超时后，我们需要进行如下两步的操作，
+
+打开链接 (http://ping.chinaz.com) 输入 github.com , 点击 Ping检测
+在 ping 检测完成后，记录下一条 TTL 值最小的 ip 地址，例如：192.30.255.121
+修改 Hosts 文件
+在命令行输入 sudo vi /etc/hosts ，回车之后进入 vim 编辑器开始编辑 hosts 文件
+在文件的最后面添加 192.30.255.113 github.com，保存并退出
+再次在命令行 ping github.com 就能看到效果了
+请愉快的使用 github 吧
